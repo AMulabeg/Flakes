@@ -5,9 +5,15 @@
    imports = [
      ./homebrew.nix
      ./fonts.nix
-      <home-manager/nix-darwin>
+      # <home-manager/nix-darwin>
    ];
-    
+    home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      amer = import ./home.nix;
+    };
+  };
+
         
     environment.systemPackages = with pkgs; [
     # Neovim tools

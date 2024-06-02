@@ -13,7 +13,7 @@
 
   outputs = { self, nix-darwin, nixpkgs, templ, home-manager, ... }@inputs:
   let
-    configuration = { pkgs, ... }: {
+      configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       nixpkgs.config.allowUnfree = true;
@@ -27,13 +27,12 @@
         home = "/Users/amer";
       };
 
-
       # Auto upgrade nix package and the daemon service.
       services.nix-daemon.enable = true;
       # nix.package = pkgs.nix;
 
       # Necessary for using flakes on this system.
-      nix.settings.experimental-features = "nix-command flakes";
+      # nix.settings.experimental-features = "nix-command flakes";
 
       # Create /etc/zshrc that loads the nix-darwin environment.
       programs.zsh.enable = true;  # default shell on catalina
