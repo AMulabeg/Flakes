@@ -20,12 +20,10 @@
       nixpkgs.overlays = [
         inputs.templ.overlays.default
       ];
-      environment.systemPackages =
-        [  import ~/.nixpkgs/darwin-configuration.nix
-        ];
-
+      imports = [./darwin-configuration.nix];
+       
       users.users.amer = {
-        name = "Amer";
+        name = "amer";
         home = "/Users/amer";
       };
 
