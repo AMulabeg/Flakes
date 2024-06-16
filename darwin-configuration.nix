@@ -21,6 +21,7 @@
     neovim
     ripgrep
     # Terminal tools
+    stow
     git
     zsh
     fd
@@ -61,6 +62,7 @@
     ultralist
     home-manager
     docker
+    btop
     # TWM tools 
     skhd
     yabai

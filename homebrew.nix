@@ -14,6 +14,8 @@ homebrew = {
       "tpm"
       "yq"
     # Stuff that doesn't exist on nix or for some reason
+        "luajit"
+
     ];
 
 
@@ -24,6 +26,7 @@ homebrew = {
 
         casks = [
       # "firefox"
+      "google-chrome"
       "anaconda"
       "karabiner-elements"
       "obsidian"
