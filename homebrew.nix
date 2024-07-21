@@ -14,7 +14,7 @@ homebrew = {
       "tpm"
       "yq"
     # Stuff that doesn't exist on nix or for some reason
-        "luajit"
+      "luajit"
 
     ];
 
@@ -27,10 +27,11 @@ homebrew = {
         casks = [
       # "firefox"
       "google-chrome"
+      "Itsycal"
       "anaconda"
       "karabiner-elements"
       "obsidian"
-      "raycast"
+      "alfred"
       "wezterm"
       "discord"
       "wireshark"
@@ -43,8 +44,7 @@ homebrew = {
       "betterdisplay"
       "thunderbird"
       "sf-symbols"
-      
-      "font-jetbrains-mono-nerd-font"
+      "shottr" 
       
     
     ];

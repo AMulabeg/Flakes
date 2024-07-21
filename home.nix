@@ -7,7 +7,8 @@
   home.packages = [
   ];
   home.sessionPath = [
-    "$HOME/.local/bin"
+    "/Users/amer/.local/bin"
+    "/Users/amer/.cargo/bin"
   ];
   home.file = {
   };

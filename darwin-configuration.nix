@@ -4,7 +4,6 @@
    # $ nix-env -qaP | grep wget
    imports = [
      ./homebrew.nix
-     ./fonts.nix
       # <home-manager/nix-darwin>
    ];
     home-manager = {
@@ -16,11 +15,16 @@
 
         
     environment.systemPackages = with pkgs; [
+
+    # nix tools
+    nix-tree
+    nix-top
     # Neovim tools
     vim
     neovim
     ripgrep
     # Terminal tools
+    subversionClient
     stow
     git
     zsh
@@ -75,6 +79,7 @@
     gnumake
     openjdk
     cargo
+    rustc
     nodejs
     # SQL tools
     sqlite
