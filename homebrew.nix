@@ -1,11 +1,12 @@
-{...}:{
+{ ... }: {
 
 
-homebrew = {
+  homebrew = {
     enable = true;
-    
-    brews =[
-    # macOS packages
+
+    brews = [
+      # macOS packages
+      "neovim"
       "switchaudio-osx"
       "borders"
       "yabai"
@@ -13,27 +14,28 @@ homebrew = {
       "sketchybar"
       "tpm"
       "yq"
-    # Stuff that doesn't exist on nix or for some reason
-      "luajit"
+      "ruby"
+      "bitwarden-cli"
 
+      # Stuff that doesn't exist on nix or for some reason
     ];
 
 
     taps = [
       "homebrew/services"
+      "koekeishiya/formulae"
+      "felixkratz/formulae"
     ];
-     
 
-        casks = [
+
+    casks = [
       # "firefox"
-      "google-chrome"
-      "Itsycal"
+      "shortcat"
       "anaconda"
       "karabiner-elements"
       "obsidian"
       "alfred"
       "wezterm"
-      "discord"
       "wireshark"
       "element"
       "hiddenbar"
@@ -43,10 +45,8 @@ homebrew = {
       "transmit"
       "betterdisplay"
       "thunderbird"
-      "sf-symbols"
-      "shottr" 
-      
-    
+      "shottr"
+      "gimp"
     ];
-};
+  };
 }

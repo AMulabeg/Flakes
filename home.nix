@@ -9,11 +9,18 @@
   home.sessionPath = [
     "/Users/amer/.local/bin"
     "/Users/amer/.cargo/bin"
+    "/Users/amer/.gem"
+    "/Users/amer/.ghcup/bin/ghc"
+
   ];
-  home.file = {
+  programs.git = {
+    enable = true;
+    userName = "AMulabeg";
+    userEmail = "a.mulabeg@proton.me";
   };
+  home.file = { };
   home.sessionVariables = {
-     EDITOR = "Neovim";
+    EDITOR = "Neovim";
   };
   programs.home-manager.enable = true;
 }

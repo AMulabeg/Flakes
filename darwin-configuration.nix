@@ -1,31 +1,31 @@
-{ inputs,config, pkgs, lib, ... }:
+{ inputs, config, pkgs, lib, ... }:
 {
-   # List packages installed in system profile. To search by name, run:
-   # $ nix-env -qaP | grep wget
-   imports = [
-     ./homebrew.nix
-      # <home-manager/nix-darwin>
-   ];
-    home-manager = {
+  imports = [
+    ./homebrew.nix
+  ];
+  home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
       amer = import ./home.nix;
     };
   };
 
-        
-    environment.systemPackages = with pkgs; [
-
+  environment.systemPackages = with pkgs; [
     # nix tools
     nix-tree
     nix-top
+
     # Neovim tools
+    nushell
+    ani-cli
     vim
-    neovim
+    oh-my-posh
     ripgrep
+    nerdfetch
     # Terminal tools
     subversionClient
     stow
+    luajitPackages.jsregexp
     git
     zsh
     fd
@@ -60,6 +60,7 @@
     terminal-notifier
     tree
     unzip
+    luarocks
     wget
     yazi
     yt-dlp
@@ -75,34 +76,31 @@
     cmake
     python3
     go
-    lua
     gnumake
     openjdk
     cargo
     rustc
     nodejs
+    yarn
+    php
+    julia_19-bin
     # SQL tools
     sqlite
     postgresql
     duckdb
+    ghc
     # Formatters
     clang-tools
   ];
 
-  # Use a custom configuration.nix location.
-  # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
-  # environment.darwinConfig = "$HOME/.config/nixpkgs/configuration.nix";
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = "aarch64-darwin";
 
+  homebrew.onActivation.cleanup = "zap";
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
   nix.package = pkgs.nix;
-
-  programs.zsh.enable = true;  # default shell on catalina
-  # Used for backwards compatibility, please read the changelog before changing.
-  # $ darwin-rebuild changelog
+  programs.zsh.enable = true; # default shell on catalina
   system.stateVersion = 4;
 }
-
