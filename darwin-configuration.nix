@@ -95,6 +95,7 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = "aarch64-darwin";
+  nix.settings.warn-dirty = false;
 
   homebrew.onActivation.cleanup = "zap";
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

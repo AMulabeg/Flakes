@@ -30,6 +30,7 @@
 
     casks = [
       # "firefox"
+      "playcover-community"
       "shortcat"
       "anaconda"
       "karabiner-elements"
@@ -47,6 +48,8 @@
       "thunderbird"
       "shottr"
       "gimp"
+      "font-sf-pro"
+      "Handbrake"
     ];
   };
 }
