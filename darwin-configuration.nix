@@ -21,7 +21,6 @@
     vim
     oh-my-posh
     ripgrep
-    nerdfetch
     # Terminal tools
     subversionClient
     stow
@@ -89,8 +88,13 @@
     postgresql
     duckdb
     ghc
+
     # Formatters
     clang-tools
+    fontconfig
+
+    # Cool stuff
+    emacs
   ];
 
   nixpkgs.config.allowUnfree = true;

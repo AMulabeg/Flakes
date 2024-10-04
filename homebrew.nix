@@ -16,6 +16,8 @@
       "yq"
       "ruby"
       "bitwarden-cli"
+      "swift"
+      "ollama"
 
       # Stuff that doesn't exist on nix or for some reason
     ];
@@ -25,17 +27,19 @@
       "homebrew/services"
       "koekeishiya/formulae"
       "felixkratz/formulae"
+
     ];
+
 
 
     casks = [
       # "firefox"
+      "discord@canary"
       "playcover-community"
       "shortcat"
       "anaconda"
       "karabiner-elements"
       "obsidian"
-      "alfred"
       "wezterm"
       "wireshark"
       "element"
@@ -48,8 +52,10 @@
       "thunderbird"
       "shottr"
       "gimp"
+      "alfred"
       "font-sf-pro"
-      "Handbrake"
+      "font-jetbrains-mono"
+
     ];
   };
 }
