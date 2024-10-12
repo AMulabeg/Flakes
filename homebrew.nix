@@ -34,7 +34,6 @@
 
     casks = [
       # "firefox"
-      "discord@canary"
       "playcover-community"
       "shortcat"
       "anaconda"
@@ -43,7 +42,6 @@
       "wezterm"
       "wireshark"
       "element"
-      "hiddenbar"
       "iina"
       "protonvpn"
       "spotify"
@@ -55,6 +53,7 @@
       "alfred"
       "font-sf-pro"
       "font-jetbrains-mono"
+      "discord"
 
     ];
   };

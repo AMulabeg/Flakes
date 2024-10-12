@@ -87,14 +87,15 @@
     sqlite
     postgresql
     duckdb
-    ghc
 
     # Formatters
     clang-tools
     fontconfig
 
+
+
+
     # Cool stuff
-    emacs
   ];
 
   nixpkgs.config.allowUnfree = true;
