@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   home.username = "amer";
@@ -11,14 +11,18 @@
     "/Users/amer/.cargo/bin"
     "/Users/amer/.gem"
     "/Users/amer/.ghcup/bin/ghc"
+    "/Users/amer/.anaconda"
 
   ];
+
   programs.git = {
     enable = true;
     userName = "AMulabeg";
     userEmail = "a.mulabeg@proton.me";
   };
-  home.file = { };
+  home.file = {
+    ".config/nvim".source = "${inputs.neovim}/nvim";
+  };
   home.sessionVariables = {
     EDITOR = "Neovim";
   };

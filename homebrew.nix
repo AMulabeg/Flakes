@@ -55,6 +55,7 @@
       "font-jetbrains-mono"
       "discord"
 
+
     ];
   };
 }

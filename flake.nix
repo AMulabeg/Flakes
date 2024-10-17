@@ -9,9 +9,20 @@
     templ.url = "github:a-h/templ";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    dotfiles =
+      {
+        url = "github:amulabeg/dots";
+        flake = false;
+      };
+
+    neovim = {
+      url = "github:amulabeg/neovim";
+      flake = false;
+    };
+
   };
 
-  outputs = { self, nix-darwin, nixpkgs, templ, home-manager, ... }@inputs:
+  outputs = { self, nix-darwin, nixpkgs, templ, home-manager, dotfiles, neovim, ... }@inputs:
     let
       configuration = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;

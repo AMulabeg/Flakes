@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "dotfiles": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1729172103,
+        "narHash": "sha256-OuGMxkfEkctngwOn+gLb18Z0ABdn79NkUXXoK1zrs/w=",
+        "owner": "amulabeg",
+        "repo": "dots",
+        "rev": "4d73db92cd6652c95f0c1f85cda0c6896ad2e893",
+        "type": "github"
+      },
+      "original": {
+        "owner": "amulabeg",
+        "repo": "dots",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -97,6 +113,22 @@
         "type": "github"
       }
     },
+    "neovim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1729171928,
+        "narHash": "sha256-z6JyW/WYXha/yUMgywhrwgJ5ma3MId23+n3KrZ1o0wg=",
+        "owner": "amulabeg",
+        "repo": "neovim",
+        "rev": "0ec080d54e89e5b5001d2bd913cfbd1fdfb333c5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "amulabeg",
+        "repo": "neovim",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -167,7 +199,9 @@
     },
     "root": {
       "inputs": {
+        "dotfiles": "dotfiles",
         "home-manager": "home-manager",
+        "neovim": "neovim",
         "nix-darwin": "nix-darwin",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",

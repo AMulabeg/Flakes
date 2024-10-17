@@ -97,7 +97,6 @@
 
     # Cool stuff
   ];
-
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = "aarch64-darwin";
   nix.settings.warn-dirty = false;
