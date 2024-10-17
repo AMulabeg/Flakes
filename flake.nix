@@ -45,6 +45,7 @@
 
         nixpkgs.hostPlatform = "aarch64-darwin";
       };
+
     in
     {
       darwinConfigurations."snow" = nix-darwin.lib.darwinSystem {
@@ -55,10 +56,12 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.amer = import ./home.nix;
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+            };
           }
         ];
       };
-
       darwinPackages = self.darwinConfigurations."snow".pkgs;
     };
 }
