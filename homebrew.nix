@@ -18,6 +18,8 @@
       "bitwarden-cli"
       "swift"
       "ollama"
+      "ca-certificates"
+      "terminal-notifier"
 
       # Stuff that doesn't exist on nix or for some reason
     ];
@@ -28,14 +30,15 @@
       "koekeishiya/formulae"
       "felixkratz/formulae"
 
+
     ];
 
 
 
     casks = [
       # "firefox"
+      "vscodium"
       "playcover-community"
-      "shortcat"
       "anaconda"
       "karabiner-elements"
       "obsidian"
@@ -53,8 +56,6 @@
       "alfred"
       "font-sf-pro"
       "font-jetbrains-mono"
-      "discord"
-
 
     ];
   };

@@ -11,15 +11,11 @@
   };
 
   environment.systemPackages = with pkgs; [
-    # nix tools
-    nix-tree
-    nix-top
-
+    man
     # Neovim tools
     nushell
     ani-cli
     vim
-    oh-my-posh
     ripgrep
     # Terminal tools
     subversionClient
@@ -56,7 +52,6 @@
     ranger
     starship
     tldr
-    terminal-notifier
     tree
     unzip
     luarocks
@@ -92,7 +87,9 @@
     clang-tools
     fontconfig
 
-
+    # python
+    poetry
+    vscodium
 
 
     # Cool stuff
