@@ -3,8 +3,12 @@
 
   homebrew = {
     enable = true;
+    onActivation = {
+      autoUpdate = true;
+      upgrade = true;
+    };
 
-    brews = [
+  brews = [
       # macOS packages
       "neovim"
       "switchaudio-osx"
@@ -30,15 +34,13 @@
       "koekeishiya/formulae"
       "felixkratz/formulae"
 
-
+      "nikitabobko/tap"
     ];
 
 
 
     casks = [
       # "firefox"
-      "vscodium"
-      "playcover-community"
       "anaconda"
       "karabiner-elements"
       "obsidian"
@@ -48,7 +50,6 @@
       "iina"
       "protonvpn"
       "spotify"
-      "transmit"
       "betterdisplay"
       "thunderbird"
       "shottr"
@@ -56,6 +57,7 @@
       "alfred"
       "font-sf-pro"
       "font-jetbrains-mono"
+      "shortcat"
 
     ];
   };
